@@ -5,7 +5,7 @@ from . import views
 
 router = DefaultRouter() # amader router
 
-router.register('', views.ContactUsViewset) # router ar antena
+router.register('', views.ServicesViewset) # router ar antena
 
 urlpatterns = [
     path('', include(router.urls)),
