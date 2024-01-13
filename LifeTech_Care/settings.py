@@ -28,6 +28,8 @@ SECRET_KEY = 'django-insecure-95i_8odk4)n=+_e6v$86589on^#gnisr+trf+dohvy^2z#i^m4
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
+CSRF_TRUSTED_ORIGINS = ['https://lifetech-care.onrender.com','https://*.127.0.0.1']
+
 
 
 # Application definition
