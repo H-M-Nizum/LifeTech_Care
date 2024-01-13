@@ -4,9 +4,9 @@ from patient.models import PatientModel
 # Create your models here.
 
 APPOINTMENT_STATUS = [
-    ('Completed', 'Completed'),
     ('Pending', 'Pending'),
     ('Running', 'Running'),
+    ('Completed', 'Completed'),
 ]
 
 APPOINTMENT_TYPE = [
