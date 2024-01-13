@@ -10,4 +10,5 @@ router.register('list', views.PatientViewset) # router ar antena
 urlpatterns = [
     path('', include(router.urls)),
     path('register/', views.PatientRegisterViewsset.as_view(), name='register'),
+    path('active/<uid64>/<token>/', views.activate, name='activate')
 ]
