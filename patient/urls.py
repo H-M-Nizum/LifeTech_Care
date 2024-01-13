@@ -11,5 +11,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('register/', views.PatientRegisterViewsset.as_view(), name='register'),
     path('login/', views.UserLoginApiview.as_view(), name='login'),
+    path('logout/', views.UserLogoutView.as_view(), name='logout'),
     path('active/<uid64>/<token>/', views.activate, name='activate')
 ]

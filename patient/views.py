@@ -16,7 +16,7 @@ from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 
 from django.contrib.auth.models import User
-from django.contrib.auth import authenticate
+from django.contrib.auth import authenticate, login, logout
 
 from rest_framework.authtoken.models import Token
 
@@ -79,8 +79,16 @@ class UserLoginApiview(APIView):
 
             if user:
                 token, _ = Token.objects.get_or_create(user=user)
+                login(request, user)
                 return Response({'token': token.key, 'úser_id': user.id})
             else:
                 return Response({'error' : 'Invalid User'})
         
         return Response(serializer.errors)
+
+
+class UserLogoutView(APIView):
+    def get(self, request):
+        request.user.auth_token.delete()
+        logout(request)
+        return redirect("login")
