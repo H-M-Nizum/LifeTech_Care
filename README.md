@@ -3,6 +3,7 @@
 Patient can see all doctor and particular doctor details, take appointment, through remview and see other patient review
 Docttor can one to one meet with patien and give soluation. 
 
+[Api_Live_link](https://lifetech-care.onrender.com/)
 ## Feature
 
 ### Admin
